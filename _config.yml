@@ -3,6 +3,6 @@ markdown: kramdown
 
 # collections
 collections:
-  topics:
+  papers:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:year/:name

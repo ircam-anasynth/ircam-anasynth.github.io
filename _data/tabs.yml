@@ -1,8 +1,12 @@
 - name: Home
   path: /
+  tag: home
 - name: Blog
   path: /blog.html
-- name: Topics
-  path: /topics.html
+  tag: blog
+- name: Papers
+  path: /papers.html
+  tag: papers
 - name: About
   path: /about.html
+  tag: about

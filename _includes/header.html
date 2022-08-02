@@ -3,8 +3,8 @@
     <div class="container">
       <ul class="navbar-nav mr-auto">
         {% for tab in site.data.tabs %}
-          {% if tab.name != 'About' %}
-            <li class="nav-item {% if page.url == tab.path %}active{% endif %}">
+          {% if tab.tag != 'about' %}
+            <li class="nav-item {% if page.url contains tab.tag %}active{% endif %}">
               <a class="nav-link" href="{{ tab.path }}" style="font-family: arial;">{{ tab.name }}</a>
             </li>
           {% endif %}

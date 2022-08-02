@@ -3,15 +3,15 @@ layout: default
 title: Blog
 ---
 
-Work in progress...
+There are currently no entries in our blog.
 
 
-<!--ul class="list-group list-group-flush">
-{% for topic in site.topics %}
+<ul class="list-group list-group-flush">
+{% for blog in site.blogs %}
 <li class="list-group-item">
-	<a href="{{ topic.url }}">{{ topic.title }}</a>
-<p>{{ topic.abstract }}</p>
+	<a href="{{ blog.url }}">{{ blog.title }}</a>
+<p>{{ blog.abstract }}</p>
 </li>
 {% endfor %}
-</ul-->
+</ul>
 
