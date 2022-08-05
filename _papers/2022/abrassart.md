@@ -400,7 +400,6 @@ Compared to the entire Da-Tacos Me, Ha and Rh features are improved (almost 15% 
 In this section we illustrate what distances, features tend to give to version pairs (positives, *p<sub>+</sub>(d)*) and non version pairs (negatives, *p<sub>-</sub>(d)*). Here we plot the distributions for both cases and the distributions for combined features for all datasets used.
 
 <div class="container">
-<figcaption class="figure-caption text-center"><big>Figure 2.1: Distributions for SHS</big><sub>4-</sub>.</figcaption>
   <div class="row">
    <div class="col">
       <span><img src="/assets/images/papers/2022/abrassart/f0_distrib.jpg" width="300"/></span>
@@ -419,13 +418,13 @@ In this section we illustrate what distances, features tend to give to version p
       <figcaption class="figure-caption text-center">(d) Ly distribution.</figcaption>
     </div>
   </div>
+  <figcaption class="figure-caption text-center"><big>Figure 2.1: Distributions for SHS</big><sub>4-</sub>.</figcaption>
 </div>
 
 We also display the Bhattacharyya coefficient (BC) which is a measure of the overlap between two distributions. The closer the coefficient is to zero, the more the distributions are separated and therefore the risk of false positives or negatives is decreased. As showed in Section 4.2. in the article, the best features are Ha and Ly which have the lowest BCs. We can also add that all features seems to be better at determining if songs are non-versions than versions by looking at how the negative distribution is narrower.  We can note on Ly distribution, a bump in the positives with a high distance, this might be caused by some instrumental songs, song with few lyrics or versions in different languages. This can also be supported by the Ly distributions on Da-Tacos and Da-Tacos-Vocals on figure 2.2.
 
 <div class="container">
 <center>
-<figcaption class="figure-caption text-center"><big>Figure 2.2: Ly distributions for Da-Tacos and Da-Tacos-Vocals.</big></figcaption>
 <div class="row">
     <div class="col">
             <span><img src="/assets/images/papers/2022/abrassart/ivi_lyric_4501x28_C1.jpg" width="300"/></span>
@@ -436,6 +435,7 @@ We also display the Bhattacharyya coefficient (BC) which is a measure of the ove
             <figcaption class="figure-caption text-center">(b) Ly distribution on Da-Tacos-Vocals.</figcaption>
     </div> 
   </div>
+  <figcaption class="figure-caption text-center"><big>Figure 2.2: Ly distributions for Da-Tacos and Da-Tacos-Vocals.</big></figcaption>
 </center>
 </div>
 
@@ -445,7 +445,6 @@ Finally we can see on Figure 2.3 how features combination can improve results. H
 
 <div class="container">
 <center>
-<figcaption class="figure-caption text-center"><big>Figure 2.3: Me+Ha+Ly distributions. </big></figcaption>
 <div class="row">
 <div class="col">
   <span><img src="/assets/images/papers/2022/abrassart/Me+Ha+Ly_shs4.jpg" width="300" /></span>
@@ -460,6 +459,7 @@ Finally we can see on Figure 2.3 how features combination can improve results. H
   <figcaption class='figure-caption text-center'>(c) Me+Ha+Ly distribution on Da-Tacos-Vocals</figcaption>
 </div>
 </div>
+<figcaption class="figure-caption text-center"><big>Figure 2.3: Me+Ha+Ly distributions. </big></figcaption>
 </center>
 </div>
 
@@ -468,7 +468,24 @@ Finally we can see on Figure 2.3 how features combination can improve results. H
 
 In this section we display clusters as in the article, with different features and combination and on different datasets.
 
-Coming soon...
+An interesting way to see how instrumental songs affect the system's performances is to plot clusters for Me+Ha vs. Ly on Da-Tacos and Da-Tacos-Vocals to visualize the false negatives. 
 
-<h3>Some additional insights</h3>
-Coming soon...
+<div class="container">
+<center>
+<div class="row">
+    <div class="col">
+            <span><img src="/assets/images/papers/2022/abrassart/Me+Ha-Ly_500_datacos.jpg" width="300"/></span>
+            <figcaption class="figure-caption text-center">(a) Ly clusters on Da-Tacos.</figcaption>
+    </div>
+    <div class="col">
+            <span><img src="/assets/images/papers/2022/abrassart/Me+Ha-Ly_500_no_instr.jpg" width="300"/></span>
+            <figcaption class="figure-caption text-center">(b) Ly clusters on Da-Tacos-Vocals.</figcaption>
+    </div> 
+  </div>
+  <figcaption class="figure-caption text-center"><big>Figure 3.1: Ly clusters for Da-Tacos and Da-Tacos-Vocals.</big></figcaption>
+</center>
+</div>
+
+
+Indeed, we can see on Figure 3.1.(a) that Ly tends to give to negative pairs more smaller distances, and that this behaviour does not exist with Da-Tacos-Vocals (Figure 3.1.(b)) which suggests that those false positives were the instrumental songs which had small distances between them because of the lack of information in the lyrics.
+
