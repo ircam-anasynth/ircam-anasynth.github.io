@@ -29,13 +29,15 @@ Coming soon...
 
 In this section we provide some illustrative and contrastive examples between Ly, Rh and Me+Ha combination. We display the examples from the article with the YouTube links and some others.
 
-##### Ly-Me+Ha examples
+##### 1. Ly-Me+Ha examples
 
-**Ly > Me+Ha**
+**1.1 Ly > Me+Ha**
 
 <figure>
+<center>
 <img src="/assets/images/papers/2022/abrassart/you_rascal_you_final.jpg" width="800" />
-<figcaption class="figure-caption text-left"><big>Fig.5.3.1.1. Ly better than Me+Ha- d<sub>Me+Ha</sub>=1.470, d<sub>Ly</sub>=0.238 </big></figcaption>
+<figcaption class="figure-caption text-center"><big>Figure 1.1.1: Ly better than Me+Ha- d<sub>Me+Ha</sub>=1.470, d<sub>Ly</sub>=0.238. </big></figcaption>
+</center>
 </figure>
 
 
@@ -61,9 +63,13 @@ In this section we provide some illustrative and contrastive examples between Ly
 </a>
 </p>
 
+There are many versions whose musical style, melody and harmony differ greatly from the original, and where only the lyrics can still help to identify them. This is illustrated on Figure 1.1.1, which shows that the Jimmy Noone's and John Fogerty's versions of "You Rascal You" are very different musically while the lyrics exhibit enough similarity to be correctly identified.
+
 <figure>
+<center>
 <img src="/assets/images/papers/2022/abrassart/i_natt.jpg" width="800" />
-<figcaption class="figure-caption text-left"><big>Fig.5.3.1.2. Ly better than Me+Ha- d<sub>Me+Ha</sub>=1.448, d<sub>Ly</sub>=0.685 </big> </figcaption>
+<figcaption class="figure-caption text-center"><big>Figure 1.1.2: Ly better than Me+Ha- d<sub>Me+Ha</sub>=1.448, d<sub>Ly</sub>=0.685. </big> </figcaption>
+</center>
 </figure>
 
 <p>
@@ -88,12 +94,16 @@ In this section we provide some illustrative and contrastive examples between Ly
 </a>
 </p>
 
+It also appears that our approximated ALR system is efficient for different languages. For instance, the versions of Asta Kask and of The Hep Stars of the song "I natt jag drömde", are different in melody and harmony while the lyrics remain similar, despite the fact that the lyrics are in Swedish.
 
-**Ly < Me+Ha**
+
+**1.2 Ly < Me+Ha**
 
 <figure>
+<center>
 <img src="/assets/images/papers/2022/abrassart/nightshift_final.jpg" width="800" />
-<figcaption class="figure-caption text-left"><big>Fig.5.3.1.3. Ly worse than Me+Ha- d<sub>Me+Ha</sub>=0.597, d<sub>Ly</sub>=1.282 </big></figcaption>
+<figcaption class="figure-caption text-center"><big>Figure 1.2.1: Ly worse than Me+Ha- d<sub>Me+Ha</sub>=0.597, d<sub>Ly</sub>=1.282. </big></figcaption>
+</center>
 </figure>
 
 <p>
@@ -118,13 +128,17 @@ In this section we provide some illustrative and contrastive examples between Ly
 </a>
 </p>
 
-##### 5.3.2. Rh-Me+Ha examples
+A case were lyrics can be counter-productive is the instrumental version case. In the example shown in Figure 1.2.1, the version of "Nightshift" by the Commodores has lyrics while the one of Jim Horn's does not. We noticed that the system sometimes considers lead instruments as voices. However, this Ly false negative is correctly caught by the Me+Ha. 
 
-**Rh > Me+Ha**
+##### 2. Rh-Me+Ha examples
+
+**2.1 Rh > Me+Ha**
 
 <figure>
+<center>
 <img src="/assets/images/papers/2022/abrassart/pimpf_final.jpg" width="800" />
-<figcaption class="figure-caption text-left"> <big> Fig.5.3.2.1. Rh better than Me+Ha - d<sub>Me+Ha</sub>=1.084, d<sub>Rh</sub>=0.459 </big></figcaption>
+<figcaption class="figure-caption text-center"> <big> Figure 2.1.1: Rh better than Me+Ha - d<sub>Me+Ha</sub>=1.084, d<sub>Rh</sub>=0.459 </big></figcaption>
+</center>
 </figure>
 
 <p>
@@ -149,9 +163,13 @@ In this section we provide some illustrative and contrastive examples between Ly
 </a>
 </p>
 
+Even though Rh yields poor performances in general, there are cases where it is the only feature available to identify versions. This is illustrated on Figure 1.1.1, which shows the Rh, Me and Ha features for two versions of "Pimpf". In this song, the melody is almost non-existent, and the harmony is very different between both versions. Only a few bass notes in the middle are salient enough to identify the song, and this short bassline appears similarly on the two FP features.
+
 <figure>
+<center>
 <img src="/assets/images/papers/2022/abrassart/mamas_little_baby.jpg" width="800" />
-<figcaption class="figure-caption text-left"> <big>Fig.5.3.2.2. Rh better than Me+Ha - d<sub>Me+Ha</sub>=1.329, d<sub>Rh</sub>=0.714 </big></figcaption>
+<figcaption class="figure-caption text-center"> <big>Figure 2.1.2: Rh better than Me+Ha - d<sub>Me+Ha</sub>=1.329, d<sub>Rh</sub>=0.714 </big></figcaption>
+</center>
 </figure>
 
 <p>
@@ -176,11 +194,15 @@ In this section we provide some illustrative and contrastive examples between Ly
 </a>
 </p>
 
-**Rh < Me+Ha**
+There are also other cases where Rh might be a good discriminating feature, for instance during live concerts. One version of "Mama's Little Baby" is recorded in studio while the other is a concert filmed from the audience. The Me+Ha distance between these two versions is high because of the bad live recording quality. On the other hand, the drums are distinguishable enough to establish similarity.
+
+**2.2 Rh < Me+Ha**
 
 <figure>
+<center>
 <img src="/assets/images/papers/2022/abrassart/kenties_final.jpg" width="800" />
-<figcaption class="figure-caption text-left"><big>Fig.5.3.2.3. Rh worse than Me+Ha - d<sub>Me+Ha</sub>=0.498, d<sub>Rh</sub>=1.380 </big> </figcaption>
+<figcaption class="figure-caption text-center"><big>Figure 2.2.1: Rh worse than Me+Ha - d<sub>Me+Ha</sub>=0.498, d<sub>Rh</sub>=1.380 </big> </figcaption>
+</center>
 </figure>
 
 
@@ -206,9 +228,13 @@ In this section we provide some illustrative and contrastive examples between Ly
 </a>
 </p>
 
+On the contrary, Rh can easily produce wrong results. This is illustrated on 2.2.1, which shows the features of two versions of "Kenties kenties kenties". Although melody and harmony are similar, the rhythm is very different.
+
 <figure>
+<center>
 <img src="/assets/images/papers/2022/abrassart/anybody_know_my_name.jpg" width="800" />
-<figcaption class="figure-caption text-left"> <big>Fig.5.3.2.4. Rh worse than Me+Ha - d<sub>Me+Ha</sub>=0.526, d<sub>Rh</sub>=1.476 </big></figcaption>
+<figcaption class="figure-caption text-center"> <big>Figure 2.2.2: Rh worse than Me+Ha - d<sub>Me+Ha</sub>=0.526, d<sub>Rh</sub>=1.476 </big></figcaption>
+</center>
 </figure>
 
 <p>
@@ -232,6 +258,8 @@ In this section we provide some illustrative and contrastive examples between Ly
 </svg>  Tommy Roe's version
 </a>
 </p>
+
+Another example is "Doesn't Anybody Know My Name", which does not exhibit the same rhythmic pattern in Hank Williams' version as in Tommy Roe's.
 
 <h3>Some additional insights</h3>
 Coming soon...
