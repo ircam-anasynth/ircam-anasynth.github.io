@@ -6,14 +6,14 @@ title: Papers
 
 {% assign groups = site.papers | group_by: "category" | sort: "authors" %}
 
-<ul class="list-group list-group-flush">
-{% for group in groups %}
-    <li class="list-group-item">
+<div>
+
+    {% for group in groups %}
+
         <h3>{{ group.name }}</h3>
-    </li>
-    <ul class="list-group list-group-flush">
-    {% for paper in group.items %}
-        <li class="list-group-item">
+        <ul class="list-group list-group-flush">
+        {% for paper in group.items %}
+        <li class="list-group-item mt-1">
             <div>
                 <h5><a class="link-dark" href="{{ paper.url }}">{{ paper.title }}</a></h5>
             </div>
@@ -30,6 +30,11 @@ title: Papers
         </li>
     {%endfor%}
     </ul>
+
+
 {% endfor %}
-</ul>
+
+
+</div>
+
 

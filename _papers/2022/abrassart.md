@@ -1,6 +1,7 @@
 ---
 layout: paper
 tag: abrassart
+category: 2022
 date: 2022-01-01
 title: And what if two musical versions don't share melody, harmony, rhythm, or lyrics ? 
 authors: Mathilde Abrassart & Guillaume Doras
@@ -38,9 +39,9 @@ In this section we provide some illustrative and contrastive examples between Ly
 <figcaption class="figure-caption text-left"><big>Fig.5.3.1.1. Ly better than Me+Ha- d<sub>Me+Ha</sub>=1.470, d<sub>Ly</sub>=0.238 </big></figcaption>
 </figure>
 
+<div class="clearfix">
 
-<p>
-<a href="https://www.youtube.com/watch?v=tvGMgafW3_o" class="text-decoration-none">
+<a href="https://www.youtube.com/watch?v=tvGMgafW3_o" class="text-decoration-none float-left">
 <!-- <div class="fs-4 mb-3"> -->
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
   <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
@@ -48,10 +49,8 @@ In this section we provide some illustrative and contrastive examples between Ly
   <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
 </svg>  Jimmy Noone's version
 </a>
-</p>
 
-<p>
-<a href="https://www.youtube.com/watch?v=34KQ_sQ7Emk" class="text-decoration-none">
+<a href="https://www.youtube.com/watch?v=34KQ_sQ7Emk" class="text-decoration-none float-right">
 <!-- <div class="fs-4 mb-3"> -->
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
   <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
@@ -59,7 +58,10 @@ In this section we provide some illustrative and contrastive examples between Ly
   <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
 </svg>  John Fogerty's version
 </a>
-</p>
+
+</div>
+
+
 
 <figure>
 <img src="/assets/images/papers/2022/abrassart/i_natt.jpg" width="800" />
