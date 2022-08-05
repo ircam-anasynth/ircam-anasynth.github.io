@@ -262,60 +262,19 @@ On the contrary, Rh can easily produce wrong results. This is illustrated on 2.2
 Another example is "Doesn't Anybody Know My Name", which does not exhibit the same rhythmic pattern in Hank Williams' version as in Tommy Roe's.
 
 <h3>Some additional insights</h3>
-Coming soon...
 
+Coming soon ...
 
+<!-- #### 1. Quantitative analysis 
 
+In this section, we detail the quantitative results presented in the article. We display the results for Da-Tacos-Vocals (with no instrumental songs). We also remind Da-Tacos results.
 
-<!-- ---
-layout: paper
-tag: abrassart
-date: 2022-01-01
-title: And what if two musical versions don't share melody, harmony, rhythm, or lyrics ? 
-authors: Mathilde Abrassart & Guillaume Doras
-abstract: |
-    Version identification (VI) has seen substantial progress over the past few years. 
-    On the one hand, the introduction of the metric learning paradigm has favored the emergence of scalable yet accurate VI 
-    systems. On the other hand, using features focusing on specific aspects of musical pieces, such as melody, harmony, or 
-    lyrics, yielded interpretable and promising performances. In this work, we build upon these recent advances and propose 
-    a metric learning-based system systematically leveraging four dimensions commonly admitted to convey musical similarity 
-    between versions: melodic line, harmonic structure, rhythmic patterns, and lyrics. We describe our deliberately simple 
-    model architecture, and we show in particular that an approximated representation of the lyrics is an efficient proxy to
-    discriminate between versions and non-versions. We then describe how these features complement each other and yield new 
-    state-of-the-art performances on two publicly available datasets. We finally suggest that a VI system using a 
-    combination of melodic, harmonic, rhythmic and lyrics features could theoretically reach the optimal performances 
-    obtainable on these datasets.
----
-
-
-Welcome to the companion web site of our paper "And what if two musical versions don't share melody, harmony, rhythm, or lyrics ?"
-
-<!-- Working on it ! -->
-
-
-<!-- | Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
-
-
-[mon example](https://www.example.com) -->
-
-<!-- ## Chapter 3 : Proposed method
-
-In this section, we release our datasets.
-
-WIP
-
-## Chapter 4 : Quantitative analysis -->
-
-<!-- In this section, we detail the quantitative results presented in the article. We display the results for Da-Tacos-Vocals (with no instrumental songs). We also remind Da-Tacos results. -->
-
-<!-- <table class="table table-striped">
+<table class="table table-striped">
   <caption><big>Table 4.1. Performance metrics obtained on Da-Tacos and Da-Tacos-Vocals for input features and their combinations.</big></caption>
   <thead>
     <tr>
       <th scope="col">Test set</th>
+      <th colspan="3">SHS<sub>4-</sub></th>
       <th colspan="3">Da-Tacos-Vocals</th>
       <th colspan="3">Da-Tacos</th>
       </tr>
@@ -327,11 +286,17 @@ WIP
       <th scope="col">MAP</th>
       <th scope="col">MT@10</th>
       <th scope="col">MR1</th>
+      <th scope="col">MAP</th>
+      <th scope="col">MT@10</th>
+      <th scope="col">MR1</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td scope="row">Me</td>
+      <td>0.432</td>
+      <td>0.834</td>
+      <td>1118</td>
       <td>0.500</td>
       <td>4.436</td>
       <td>54</td>
@@ -341,6 +306,9 @@ WIP
     </tr>
     <tr>
       <td scope="row">Ha</td>
+      <td>0.542</td>
+      <td>1.014</td>
+      <td>979</td>
       <td>0.520</td>
       <td>4.605</td>
       <th>52</th>
@@ -350,6 +318,9 @@ WIP
     </tr>
     <tr>
       <td scope="row">Rh</td>
+      <td>0.100</td>
+      <td>0.235</td>
+      <td>2932</td>
       <td>0.077</td>
       <td>0.786</td>
       <td>208</td>
@@ -359,6 +330,9 @@ WIP
     </tr>
     <tr>
       <td scope="row">Ly</td>
+      <th>0.677</th>
+      <th>1.203</th>
+      <th>959</th>
       <th>0.678</th>
       <th>5.970</th>
       <td>60</td>
@@ -367,10 +341,13 @@ WIP
       <td>206</td>
     </tr>
     <tr>
-      <th colspan="7">Combinations</th>
+      <th colspan="10">Combinations</th>
     </tr>
     <tr>
       <td scope="row">Me+Ha</td>
+      <td>0.697</td>
+      <td>1.270</td>
+      <td>447</td>
       <td>0.721</td>
       <td>6.331</td>
       <td>22</td>
@@ -380,6 +357,9 @@ WIP
     </tr>
     <tr>
       <td scope="row">Me+Ha+Rh</td>
+      <td>0.692</td>
+      <td>1.262</td>
+      <td>408</td>
       <td>0.656</td>
       <td>5.774</td>
       <td>21</td>
@@ -389,6 +369,9 @@ WIP
     </tr>
     <tr>
       <td scope="row">Me+Ha+Ly</td>
+      <th>0.803</th>
+      <th>1.409</th>
+      <td>287</td>
       <th>0.821</th>
       <th>7.234</th>
       <td>16</td>
@@ -398,6 +381,9 @@ WIP
     </tr>
     <tr>
       <td scope="row">Me+Ha+Rh+Ly</td>
+      <td>0.789</td>
+      <td>1.391</td>
+      <th>281</th>
       <td>0.770</td>
       <td>6.759</td>
       <th>15</th>
@@ -406,59 +392,66 @@ WIP
       <td>34</td>
     </tr>
   </tbody>
-</table>
+</table> 
 
 Compared to the entire Da-Tacos Me, Ha and Rh features are improved (almost 15% more for the Me MAP, between 2 and 3% for the Ha and Rh MAP). But the most important improvement is the Ly feature which has its MAP increased by almost 30%. This confirms our hypothesis that the Da-Tacos results were decreased because of the numerous instrumental tracks. The add of the lyrics to the baseline no longer degrades results.
 
-## Chapter 5 : Qualitative analysis
-#### 5.1. Distributions
+#### 2. Distributions
 
 In this section we illustrate what distances, features tend to give to version pairs (positives, *p<sub>+</sub>(d)*) and non version pairs (negatives, *p<sub>-</sub>(d)*). Here we plot the distributions for both cases and the distributions for combined features for all datasets used.
 
-<div class="row">
-<figcaption class="figure-caption text-left"><big>Figure 5.1.1. Distributions for SHS</big><sub>4-</sub>.</figcaption>
-    <div class="col-sm-6">
-            <span><img src="/assets/images/papers/2022/abrassart/f0_distrib.jpg" width="300"/></span>
-            <figcaption class="figure-caption text-left">(a) Me distribution.</figcaption>
+<div class="container">
+<figcaption class="figure-caption text-center"><big>Figure 5.1.1. Distributions for SHS</big><sub>4-</sub>.</figcaption>
+  <div class="row">
+   <div class="col">
+      <span><img src="/assets/images/papers/2022/abrassart/f0_distrib.jpg" width="300"/></span>
+      <figcaption class="figure-caption text-center">(a) Me distribution.</figcaption>
+   </div>
+   <div class="col">
+      <span><img src="/assets/images/papers/2022/abrassart/cpcp_distrib.jpg" width="300"/></span>
+      <figcaption class="figure-caption text-center">(b) Ha distribution.</figcaption>
+   </div> 
+   <div class="col">
+      <span><img src="/assets/images/papers/2022/abrassart/fp_distrib.jpg" width="300"/></span>
+      <figcaption class="figure-caption text-center">(c) Rh distribution.</figcaption>
+   </div> 
+   <div class="col">
+      <span><img src="/assets/images/papers/2022/abrassart/ly_distrib.jpg" width="300"/></span>
+      <figcaption class="figure-caption text-center">(d) Ly distribution.</figcaption>
     </div>
-    <div class="col-sm-6">
-            <span><img src="/assets/images/papers/2022/abrassart/cpcp_distrib.jpg" width="300"/></span>
-            <figcaption class="figure-caption text-left">(b) Ha distribution.</figcaption>
-    </div> 
-    <div class="col-sm-6">
-            <span><img src="/assets/images/papers/2022/abrassart/fp_distrib.jpg" width="300"/></span>
-            <figcaption class="figure-caption text-left">(c) Rh distribution.</figcaption>
-    </div> 
-    <div class="col-sm-6">
-            <span><img src="/assets/images/papers/2022/abrassart/ly_distrib.jpg" width="300"/></span>
-            <figcaption class="figure-caption text-left">(d) Ly distribution.</figcaption>
-    </div>
+  </div>
 </div>
 
 We also display the Bhattacharyya coefficient (BC) which is a measure of the overlap between two distributions. The closer the coefficient is to zero, the more the distributions are separated and therefore the risk of false positives or negatives is decreased. As showed in Section 4.2. in the article, the best features are Ha and Ly which have the lowest BCs. We can also add that all features seems to be better at determining if songs are non-versions than versions by looking at how the negative distribution is narrower.  We can note on Ly distribution, a bump in the positives with a high distance, this might be caused by some instrumental songs, song with few lyrics or versions in different languages. This can also be supported by the Ly distributions on Da-Tacos and Da-Tacos-Vocals on figure 5.1.2.
 
+<div class="container">
+<center>
+<figcaption class="figure-caption text-center"><big>Figure 5.1.2. Ly distributions for Da-Tacos and Da-Tacos-Vocals.</big></figcaption>
 <div class="row">
-<figcaption class="figure-caption text-left"><big>Figure 5.1.2. Ly distributions for Da-Tacos and Da-Tacos-Vocals.</big></figcaption>
-    <div class="col-sm-6">
+    <div class="col">
             <span><img src="/assets/images/papers/2022/abrassart/ivi_lyric_4501x28_C1.jpg" width="300"/></span>
-            <figcaption class="figure-caption text-left">(a) Ly distribution on Da-Tacos.</figcaption>
+            <figcaption class="figure-caption text-center">(a) Ly distribution on Da-Tacos.</figcaption>
     </div>
-    <div class="col-sm-6">
+    <div class="col">
             <span><img src="/assets/images/papers/2022/abrassart/ivi_lyric_4501x28_no_instr.jpg" width="300"/></span>
-            <figcaption class="figure-caption text-left">(b) Ly distribution on Da-Tacos-Vocals.</figcaption>
+            <figcaption class="figure-caption text-center">(b) Ly distribution on Da-Tacos-Vocals.</figcaption>
     </div> 
+  </div>
+</center>
 </div>
 
 The positive distribution for Da-Tacos presents a big bump around a high distance, which is clearly attenuated in Da-Tacos-Vocals.
 
-Finally we can see on Figure 5.1.3. how features combination can improve results. Here, the distribution are very well spaced which avoids a big majority of false positives or negatives. -->
+Finally we can see on Figure 5.1.3. how features combination can improve results. Here, the distribution are very well spaced which avoids a big majority of false positives or negatives. 
 
-<!-- <figure>
+<figure>
+<center>
 <img src="/assets/images/papers/2022/abrassart/Me+Ha+Ly_shs4.jpg" width="300" />
-<figcaption class="figure-caption text-left"><big>Figure 5.1.3. Me+Ha+Ly distribution </big></figcaption>
-</figure>
+<figcaption class="figure-caption text-center"><big>Figure 5.1.3. Me+Ha+Ly distribution </big></figcaption>
+</center>
+</figure> -->
 
-#### 5.2. Clusters
+<!-- #### 5.2. Clusters
 
 In this section we display clusters as in the article, with different features and combination and on different datasets.
 
