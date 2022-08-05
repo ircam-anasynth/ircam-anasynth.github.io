@@ -468,23 +468,7 @@ Finally we can see on Figure 2.3 how features combination can improve results. H
 
 In this section we display clusters as in the article, with different features and combination and on different datasets.
 
-An interesting way to see how instrumental songs affect the system's performances is to plot clusters for Me+Ha vs. Ly on Da-Tacos and Da-Tacos-Vocals to visualize the false negatives. 
+Coming soon...
 
-<div class="container">
-<center>
-<figcaption class="figure-caption text-center"><big>Figure 3.1: Ly distributions for Da-Tacos and Da-Tacos-Vocals.</big></figcaption>
-<div class="row">
-    <div class="col">
-            <span><img src="/assets/images/papers/2022/abrassart/Me+Ha-Ly_500_datacos.jpg" width="300"/></span>
-            <figcaption class="figure-caption text-center">(a) Ly clusters on Da-Tacos.</figcaption>
-    </div>
-    <div class="col">
-            <span><img src="/assets/images/papers/2022/abrassart/Me+Ha-Ly_500_no_instr.jpg" width="300"/></span>
-            <figcaption class="figure-caption text-center">(b) Ly clusters on Da-Tacos-Vocals.</figcaption>
-    </div> 
-  </div>
-</center>
-</div>
-
-
-Indeed, we can see on Figure 3.1.(a) that Ly tends to give to negative pairs more smaller distances, and that this behaviour does not exist with Da-Tacos-Vocals (Figure 3.1.(b)) which suggests that those false positives were the instrumental songs which had small distances between them because of the lack of information in the lyrics.
+<h3>Some additional insights</h3>
+Coming soon...
