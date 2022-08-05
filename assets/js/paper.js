@@ -8,6 +8,15 @@ $(document).ready(function(){
 		}
 	});
 
+   // for the TOC
+  var navSelector = "#toc";
+  var $myNav = $(navSelector);
+  Toc.init($myNav);
+  $("body").scrollspy({
+    target: navSelector,
+  });
+
+
 });
 
 

@@ -18,13 +18,14 @@ abstract: |
     obtainable on these datasets.
 ---
 
+<p>Welcome to the companion web site of our paper "And what if two musical versions don't share melody, harmony, rhythm, or lyrics ?"
+</p>
 
-Welcome to the companion web site of our paper "And what if two musical versions don't share melody, harmony, rhythm, or lyrics ?"
-
+<h3>Train and test datasets</h3>
 Coming soon...
 
+<h3>Audio examples</h3>
+Coming soon...
 
-
-
-
-
+<h3>Some additional insights</h3>
+Coming soon...
