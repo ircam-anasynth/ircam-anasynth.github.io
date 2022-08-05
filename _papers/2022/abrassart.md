@@ -263,14 +263,13 @@ Another example is "Doesn't Anybody Know My Name", which does not exhibit the sa
 
 <h3>Some additional insights</h3>
 
-Coming soon ...
 
-<!-- #### 1. Quantitative analysis 
+#### 1. Quantitative analysis 
 
 In this section, we detail the quantitative results presented in the article. We display the results for Da-Tacos-Vocals (with no instrumental songs). We also remind Da-Tacos results.
 
 <table class="table table-striped">
-  <caption><big>Table 4.1. Performance metrics obtained on Da-Tacos and Da-Tacos-Vocals for input features and their combinations.</big></caption>
+  <caption><big>Table 1.1: Performance metrics obtained on Da-Tacos and Da-Tacos-Vocals for input features and their combinations.</big></caption>
   <thead>
     <tr>
       <th scope="col">Test set</th>
@@ -401,7 +400,7 @@ Compared to the entire Da-Tacos Me, Ha and Rh features are improved (almost 15% 
 In this section we illustrate what distances, features tend to give to version pairs (positives, *p<sub>+</sub>(d)*) and non version pairs (negatives, *p<sub>-</sub>(d)*). Here we plot the distributions for both cases and the distributions for combined features for all datasets used.
 
 <div class="container">
-<figcaption class="figure-caption text-center"><big>Figure 5.1.1. Distributions for SHS</big><sub>4-</sub>.</figcaption>
+<figcaption class="figure-caption text-center"><big>Figure 2.1: Distributions for SHS</big><sub>4-</sub>.</figcaption>
   <div class="row">
    <div class="col">
       <span><img src="/assets/images/papers/2022/abrassart/f0_distrib.jpg" width="300"/></span>
@@ -422,11 +421,11 @@ In this section we illustrate what distances, features tend to give to version p
   </div>
 </div>
 
-We also display the Bhattacharyya coefficient (BC) which is a measure of the overlap between two distributions. The closer the coefficient is to zero, the more the distributions are separated and therefore the risk of false positives or negatives is decreased. As showed in Section 4.2. in the article, the best features are Ha and Ly which have the lowest BCs. We can also add that all features seems to be better at determining if songs are non-versions than versions by looking at how the negative distribution is narrower.  We can note on Ly distribution, a bump in the positives with a high distance, this might be caused by some instrumental songs, song with few lyrics or versions in different languages. This can also be supported by the Ly distributions on Da-Tacos and Da-Tacos-Vocals on figure 5.1.2.
+We also display the Bhattacharyya coefficient (BC) which is a measure of the overlap between two distributions. The closer the coefficient is to zero, the more the distributions are separated and therefore the risk of false positives or negatives is decreased. As showed in Section 4.2. in the article, the best features are Ha and Ly which have the lowest BCs. We can also add that all features seems to be better at determining if songs are non-versions than versions by looking at how the negative distribution is narrower.  We can note on Ly distribution, a bump in the positives with a high distance, this might be caused by some instrumental songs, song with few lyrics or versions in different languages. This can also be supported by the Ly distributions on Da-Tacos and Da-Tacos-Vocals on figure 2.2.
 
 <div class="container">
 <center>
-<figcaption class="figure-caption text-center"><big>Figure 5.1.2. Ly distributions for Da-Tacos and Da-Tacos-Vocals.</big></figcaption>
+<figcaption class="figure-caption text-center"><big>Figure 2.2: Ly distributions for Da-Tacos and Da-Tacos-Vocals.</big></figcaption>
 <div class="row">
     <div class="col">
             <span><img src="/assets/images/papers/2022/abrassart/ivi_lyric_4501x28_C1.jpg" width="300"/></span>
@@ -442,226 +441,50 @@ We also display the Bhattacharyya coefficient (BC) which is a measure of the ove
 
 The positive distribution for Da-Tacos presents a big bump around a high distance, which is clearly attenuated in Da-Tacos-Vocals.
 
-Finally we can see on Figure 5.1.3. how features combination can improve results. Here, the distribution are very well spaced which avoids a big majority of false positives or negatives. 
+Finally we can see on Figure 2.3 how features combination can improve results. Here, the distributions are very well spaced which avoids a big majority of false positives or negatives. 
 
-<figure>
+<div class="container">
 <center>
-<img src="/assets/images/papers/2022/abrassart/Me+Ha+Ly_shs4.jpg" width="300" />
-<figcaption class="figure-caption text-center"><big>Figure 5.1.3. Me+Ha+Ly distribution </big></figcaption>
+<figcaption class="figure-caption text-center"><big>Figure 2.3: Me+Ha+Ly distributions. </big></figcaption>
+<div class="row">
+<div class="col">
+  <span><img src="/assets/images/papers/2022/abrassart/Me+Ha+Ly_shs4.jpg" width="300" /></span>
+  <figcaption class='figure-caption text-center'>(a) Me+Ha+Ly distribution on SHS<sub>4-</sub></figcaption>
+</div>
+<div class="col">
+  <span><img src="/assets/images/papers/2022/abrassart/Me+Ha+Ly_datacos.jpg" width="300" /></span>
+  <figcaption class='figure-caption text-center'>(b) Me+Ha+Ly distribution on Da-Tacos</figcaption>
+</div>
+<div class="col">
+  <span><img src="/assets/images/papers/2022/abrassart/Me+Ha+Ly_no_instr.jpg" width="300" /></span>
+  <figcaption class='figure-caption text-center'>(c) Me+Ha+Ly distribution on Da-Tacos-Vocals</figcaption>
+</div>
+</div>
 </center>
-</figure> -->
+</div>
 
-<!-- #### 5.2. Clusters
+
+#### 3. Clusters
 
 In this section we display clusters as in the article, with different features and combination and on different datasets.
 
 An interesting way to see how instrumental songs affect the system's performances is to plot clusters for Me+Ha vs. Ly on Da-Tacos and Da-Tacos-Vocals to visualize the false negatives. 
 
+<div class="container">
+<center>
+<figcaption class="figure-caption text-center"><big>Figure 3.1: Ly distributions for Da-Tacos and Da-Tacos-Vocals.</big></figcaption>
 <div class="row">
-<figcaption class="figure-caption text-left"><big>Figure 5.2. Ly distributions for Da-Tacos and Da-Tacos-Vocals.</big></figcaption>
-    <div class="col-sm-6">
+    <div class="col">
             <span><img src="/assets/images/papers/2022/abrassart/Me+Ha-Ly_500_datacos.jpg" width="300"/></span>
-            <figcaption class="figure-caption text-left">(a) Ly clusters on Da-Tacos.</figcaption>
+            <figcaption class="figure-caption text-center">(a) Ly clusters on Da-Tacos.</figcaption>
     </div>
-    <div class="col-sm-6">
+    <div class="col">
             <span><img src="/assets/images/papers/2022/abrassart/Me+Ha-Ly_500_no_instr.jpg" width="300"/></span>
-            <figcaption class="figure-caption text-left">(b) Ly clusters on Da-Tacos-Vocals.</figcaption>
+            <figcaption class="figure-caption text-center">(b) Ly clusters on Da-Tacos-Vocals.</figcaption>
     </div> 
+  </div>
+</center>
 </div>
 
-Indeed, we can see on Figure 5.2.(a) that Ly tends to give to negative pairs more smaller distances, and that this behaviour does not exist with Da-Tacos-Vocals (Figure 5.2.(b)) which suggests that those false positives were the instrumental songs which had small distances between them because of the lack of information in the lyrics.
 
-#### 5.3. Audio examples
-
-In this section we provide some illustrative and contrastive examples between Ly, Rh and Me+Ha combination. We display the examples from the article with the YouTube links and some others.
-
-##### 5.3.1. Ly-Me+Ha examples
-
-**Ly > Me+Ha**
-
-<figure>
-<img src="/assets/images/papers/2022/abrassart/you_rascal_you_final.jpg" width="800" />
-<figcaption class="figure-caption text-left"><big>Fig.5.3.1.1. Ly better than Me+Ha- d<sub>Me+Ha</sub>=1.470, d<sub>Ly</sub>=0.238 </big></figcaption>
-</figure>
-
-
-<p>
-<a href="https://www.youtube.com/watch?v=tvGMgafW3_o" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Jimmy Noone's version
-</a>
-</p>
-
-<p>
-<a href="https://www.youtube.com/watch?v=34KQ_sQ7Emk" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  John Fogerty's version
-</a>
-</p>
-
-<figure>
-<img src="/assets/images/papers/2022/abrassart/i_natt.jpg" width="800" />
-<figcaption class="figure-caption text-left"><big>Fig.5.3.1.2. Ly better than Me+Ha- d<sub>Me+Ha</sub>=1.448, d<sub>Ly</sub>=0.685 </big> </figcaption>
-</figure>
-
-<p>
-<a href="https://www.youtube.com/watch?v=HNf3sigQzyU" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Asta Kask's version
-</a>
-</p>
-
-<p>
-<a href="https://www.youtube.com/watch?v=c0xyHIUnETY" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  The Hep Stars' version
-</a>
-</p>
-
-
-**Ly < Me+Ha**
-
-<figure>
-<img src="/assets/images/papers/2022/abrassart/nightshift_final.jpg" width="800" />
-<figcaption class="figure-caption text-left"><big>Fig.5.3.1.3. Ly worse than Me+Ha- d<sub>Me+Ha</sub>=0.597, d<sub>Ly</sub>=1.282 </big></figcaption>
-</figure> -->
-
-<!-- <p>
-<a href="https://www.youtube.com/watch?v=FrkEDe6Ljqs" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Jim Horn's version
-</a>
-</p>
-
-<p>
-<a href="https://www.youtube.com/watch?v=suAzpGfV0W0" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  The Commodores' version
-</a>
-</p>
-
-##### 5.3.2. Rh-Me+Ha examples
-
-**Rh > Me+Ha**
-
-<figure>
-<img src="/assets/images/papers/2022/abrassart/pimpf_final.jpg" width="800" />
-<figcaption class="figure-caption text-left"> <big> Fig.5.3.2.1. Rh better than Me+Ha - d<sub>Me+Ha</sub>=1.084, d<sub>Rh</sub>=0.459 </big></figcaption>
-</figure>
-
-<p>
-<a href="https://www.youtube.com/watch?v=HKiDChbfycw" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  SYZYGY's version
-</a>
-</p>
-
-<p>
-<a href="https://www.youtube.com/watch?v=MR_rqDxDInI" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Depeche Mode's version
-</a>
-</p>
-
-<figure>
-<img src="/assets/images/papers/2022/abrassart/mamas_little_baby.jpg" width="800" />
-<figcaption class="figure-caption text-left"> <big>Fig.5.3.2.2. Rh better than Me+Ha - d<sub>Me+Ha</sub>=1.329, d<sub>Rh</sub>=0.714 </big></figcaption>
-</figure>
-
-<p>
-<a href="https://www.youtube.com/watch?v=EOR9WtJP0MQ" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Robert Gordon's version (studio)
-</a>
-</p>
-
-<p>
-<a href="https://www.youtube.com/watch?v=v03xNv2m5ZE" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  The Hot Rocks' version (live)
-</a>
-</p>
-
-**Rh < Me+Ha** -->
-
-<!-- <figure>
-<img src="/assets/images/papers/2022/abrassart/kenties_final.jpg" width="800" />
-<figcaption class="figure-caption text-left"><big>Fig.5.3.2.3. Rh worse than Me+Ha - d<sub>Me+Ha</sub>=0.498, d<sub>Rh</sub>=1.380 </big> </figcaption>
-</figure>
-
-
-<p>
-<a href="https://www.youtube.com/watch?v=S7ezTO63BTw" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Henry Theel's version
-</a>
-</p>
-
-<p>
-<a href="https://www.youtube.com/watch?v=7kvFZwePmyU" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Eino Grön's version
-</a>
-</p>
-
-<figure>
-<img src="/assets/images/papers/2022/abrassart/anybody_know_my_name.jpg" width="800" />
-<figcaption class="figure-caption text-left"> <big>Fig.5.3.2.4. Rh worse than Me+Ha - d<sub>Me+Ha</sub>=0.526, d<sub>Rh</sub>=1.476 </big></figcaption>
-</figure>
-
-<p>
-<a href="https://www.youtube.com/watch?v=f_chTfU52zQ" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Hank Williams' version
-</a>
-</p>
-
-<p>
-<a href="https://www.youtube.com/watch?v=qFiGiOWcJ9c" class="text-decoration-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Tommy Roe's version
-</a>
-</p>
- --> -->
+Indeed, we can see on Figure 3.1.(a) that Ly tends to give to negative pairs more smaller distances, and that this behaviour does not exist with Da-Tacos-Vocals (Figure 3.1.(b)) which suggests that those false positives were the instrumental songs which had small distances between them because of the lack of information in the lyrics.
