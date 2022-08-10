@@ -386,7 +386,7 @@ In this section, we detail the quantitative results presented in the article. We
       <td>0.765</td>
       <td>6.714</td>
       <th>14</th>
-      <td>0.600</td>
+      <td>0.560</td>
       <td>6.054</td>
       <td>33</td>
     </tr>
