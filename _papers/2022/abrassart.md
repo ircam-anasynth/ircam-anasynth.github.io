@@ -293,9 +293,9 @@ In this section, we detail the quantitative results presented in the article. We
   <tbody>
     <tr>
       <td scope="row">Me</td>
-      <td>0.432</td>
-      <td>0.834</td>
-      <td>1118</td>
+      <td>0.427</td>
+      <td>0.822</td>
+      <td>1131</td>
       <td>0.496</td>
       <td>4.400</td>
       <td>52</td>
@@ -305,9 +305,9 @@ In this section, we detail the quantitative results presented in the article. We
     </tr>
     <tr>
       <td scope="row">Ha</td>
-      <td>0.542</td>
-      <td>1.014</td>
-      <td>979</td>
+      <td>0.538</td>
+      <td>1.003</td>
+      <td>982</td>
       <td>0.513</td>
       <td>4.550</td>
       <th>51</th>
@@ -317,9 +317,9 @@ In this section, we detail the quantitative results presented in the article. We
     </tr>
     <tr>
       <td scope="row">Rh</td>
-      <td>0.100</td>
-      <td>0.235</td>
-      <td>2932</td>
+      <td>0.099</td>
+      <td>0.231</td>
+      <td>2921</td>
       <td>0.075</td>
       <td>0.762</td>
       <td>204</td>
@@ -329,12 +329,12 @@ In this section, we detail the quantitative results presented in the article. We
     </tr>
     <tr>
       <td scope="row">Ly</td>
-      <th>0.677</th>
-      <th>1.203</th>
-      <th>959</th>
-      <th>0.678</th>
-      <th>5.970</th>
-      <td>60</td>
+      <th>0.672</th>
+      <th>1.190</th>
+      <th>968</th>
+      <th>0.674</th>
+      <th>5.931</th>
+      <td>59</td>
       <td>0.393</td>
       <td>4.596</td>
       <td>199</td>
@@ -344,9 +344,9 @@ In this section, we detail the quantitative results presented in the article. We
     </tr>
     <tr>
       <td scope="row">Me+Ha</td>
-      <td>0.697</td>
-      <td>1.270</td>
-      <td>447</td>
+      <td>0.693</td>
+      <td>1.256</td>
+      <td>453</td>
       <td>0.717</td>
       <td>6.290</td>
       <td>21</td>
@@ -356,9 +356,9 @@ In this section, we detail the quantitative results presented in the article. We
     </tr>
     <tr>
       <td scope="row">Me+Ha+Rh</td>
-      <td>0.692</td>
-      <td>1.262</td>
-      <td>408</td>
+      <td>0.688</td>
+      <td>1.250</td>
+      <td>413</td>
       <td>0.650</td>
       <td>5.717</td>
       <td>20</td>
@@ -368,9 +368,9 @@ In this section, we detail the quantitative results presented in the article. We
     </tr>
     <tr>
       <td scope="row">Me+Ha+Ly</td>
-      <th>0.803</th>
-      <th>1.409</th>
-      <td>287</td>
+      <th>0.800</th>
+      <th>1.396</th>
+      <td>291</td>
       <th>0.818</th>
       <th>7.205</th>
       <td>16</td>
@@ -380,9 +380,9 @@ In this section, we detail the quantitative results presented in the article. We
     </tr>
     <tr>
       <td scope="row">Me+Ha+Rh+Ly</td>
-      <td>0.789</td>
-      <td>1.391</td>
-      <th>281</th>
+      <td>0.785</td>
+      <td>1.378</td>
+      <th>286</th>
       <td>0.765</td>
       <td>6.714</td>
       <th>14</th>
