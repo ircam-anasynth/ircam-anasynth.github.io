@@ -28,10 +28,6 @@ Welcome to the companion web site of our paper "And what if two musical versions
 Coming soon...  
 <br/>
 
-<<<<<<< HEAD
-In this section we provide some illustrative and contrastive examples between Ly, Rh and Me+Ha combination. We display the examples from the article with the YouTube links and some others. Last access to the videos : 14/8/2022.
-=======
->>>>>>> 2dbfbe5c5eda8b03d6d7a0f85e423506882a26b5
 
 ### Audio examples
 
@@ -76,11 +72,12 @@ be correctly identified.
 </div>
 
 <div class="d-flex">
-<a href="https://www.youtube.com/watch?v=HNf3sigQzyU" class="text-decoration-none">
-<i class="bi bi-music-note-beamed"></i>  Asta Kask's version
+
+<a href="https://www.youtube.com/watch?v=c0xyHIUnETY" class="text-decoration-none">
+<i class="bi bi-music-note-beamed"></i> The Hep Stars' version
 </a>
-<a href="https://www.youtube.com/watch?v=c0xyHIUnETY" class="text-decoration-none  ml-auto">
-<i class="bi bi-music-note-beamed"></i>  The Hep Stars' version
+<a href="https://www.youtube.com/watch?v=HNf3sigQzyU" class="text-decoration-none  ml-auto">
+<i class="bi bi-music-note-beamed"></i>  Asta Kask's version 
 </a>
 </div>
 <br/>
@@ -103,11 +100,11 @@ remain similar, despite the fact that the lyrics are in Swedish.
 
 <div class="d-flex">
 <a href="https://www.youtube.com/watch?v=FrkEDe6Ljqs" class="text-decoration-none">
-<i class="bi bi-music-note-beamed"></i>  Jim Horn's version
+<i class="bi bi-music-note-beamed"></i>  The Commodores' version
 </a>
 
 <a href="https://www.youtube.com/watch?v=suAzpGfV0W0" class="text-decoration-none ml-auto">
-<i class="bi bi-music-note-beamed"></i>  The Commodores' version
+<i class="bi bi-music-note-beamed"></i>  Jim Horn's version
 </a>
 </div>
 <br/>
