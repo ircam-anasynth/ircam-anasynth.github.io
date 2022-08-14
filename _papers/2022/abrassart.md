@@ -27,7 +27,7 @@ Coming soon...
 <h3>Audio examples</h3>
 
 
-In this section we provide some illustrative and contrastive examples between Ly, Rh and Me+Ha combination. We display the examples from the article with the YouTube links and some others.
+In this section we provide some illustrative and contrastive examples between Ly, Rh and Me+Ha combination. We display the examples from the article with the YouTube links and some others. Last access to the videos : 14/8/2022.
 
 ##### 1. Ly-Me+Ha examples
 
@@ -73,17 +73,6 @@ There are many versions whose musical style, melody and harmony differ greatly f
 </figure>
 
 <p>
-<a href="https://www.youtube.com/watch?v=HNf3sigQzyU" class="text-decoration-none">
-<!-- <div class="fs-4 mb-3"> -->
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Asta Kask's version
-</a>
-</p>
-
-<p>
 <a href="https://www.youtube.com/watch?v=c0xyHIUnETY" class="text-decoration-none">
 <!-- <div class="fs-4 mb-3"> -->
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
@@ -91,6 +80,17 @@ There are many versions whose musical style, melody and harmony differ greatly f
   <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
   <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
 </svg>  The Hep Stars' version
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=HNf3sigQzyU" class="text-decoration-none">
+<!-- <div class="fs-4 mb-3"> -->
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
+  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
+  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
+</svg>  Asta Kask's version
 </a>
 </p>
 
@@ -113,7 +113,7 @@ It also appears that our approximated ALR system is efficient for different lang
   <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
   <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
   <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  Jim Horn's version
+</svg>  The Commodores' version
 </a>
 </p>
 
@@ -124,7 +124,7 @@ It also appears that our approximated ALR system is efficient for different lang
   <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
   <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
   <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>  The Commodores' version
+</svg>  Jim Horn's version
 </a>
 </p>
 
