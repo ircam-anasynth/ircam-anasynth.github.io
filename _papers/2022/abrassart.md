@@ -31,7 +31,7 @@ Coming soon...
 ### Audio examples
 
 In this section we provide some illustrative and contrastive examples between Ly, Rh and Me+Ha combination. 
-We display the examples from the article with the YouTube links and some others.  
+We display the examples from the article with the YouTube links and some others.  Last access to videos : 14/8/2022.
 
 
 #### 1. Ly-Me+Ha examples
