@@ -23,7 +23,6 @@ Welcome to the companion web site of our paper "And what if two musical versions
 <br/>
 
 
-
 ### Train and test datasets
 Coming soon...  
 <br/>
