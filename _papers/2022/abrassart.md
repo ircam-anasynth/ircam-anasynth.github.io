@@ -23,7 +23,6 @@ Welcome to the companion web site of our paper "And what if two musical versions
 <br/>
 
 
-
 ### Train and test datasets
 Coming soon...  
 <br/>
@@ -32,7 +31,7 @@ Coming soon...
 ### Audio examples
 
 In this section we provide some illustrative and contrastive examples between Ly, Rh and Me+Ha combination. 
-We display the examples from the article with the YouTube links and some others.  
+We display the examples from the article with the YouTube links and some others.  Last access to videos : 14/8/2022.
 
 
 #### 1. Ly-Me+Ha examples
@@ -72,11 +71,12 @@ be correctly identified.
 </div>
 
 <div class="d-flex">
-<a href="https://www.youtube.com/watch?v=HNf3sigQzyU" class="text-decoration-none">
-<i class="bi bi-music-note-beamed"></i>  Asta Kask's version
+
+<a href="https://www.youtube.com/watch?v=c0xyHIUnETY" class="text-decoration-none">
+<i class="bi bi-music-note-beamed"></i> The Hep Stars' version
 </a>
-<a href="https://www.youtube.com/watch?v=c0xyHIUnETY" class="text-decoration-none  ml-auto">
-<i class="bi bi-music-note-beamed"></i>  The Hep Stars' version
+<a href="https://www.youtube.com/watch?v=HNf3sigQzyU" class="text-decoration-none  ml-auto">
+<i class="bi bi-music-note-beamed"></i>  Asta Kask's version 
 </a>
 </div>
 <br/>
@@ -99,11 +99,11 @@ remain similar, despite the fact that the lyrics are in Swedish.
 
 <div class="d-flex">
 <a href="https://www.youtube.com/watch?v=FrkEDe6Ljqs" class="text-decoration-none">
-<i class="bi bi-music-note-beamed"></i>  Jim Horn's version
+<i class="bi bi-music-note-beamed"></i>  The Commodores' version
 </a>
 
 <a href="https://www.youtube.com/watch?v=suAzpGfV0W0" class="text-decoration-none ml-auto">
-<i class="bi bi-music-note-beamed"></i>  The Commodores' version
+<i class="bi bi-music-note-beamed"></i>  Jim Horn's version
 </a>
 </div>
 <br/>
@@ -241,102 +241,102 @@ In this section, we detail the quantitative results presented in the article. We
   <tbody>
     <tr>
       <td scope="row">Me</td>
-      <td>0.432</td>
-      <td>0.834</td>
-      <td>1118</td>
-      <td>0.500</td>
-      <td>4.436</td>
-      <td>54</td>
-      <td>0.367</td>
-      <td>4.100</td>
-      <td>99</td>
+      <td>0.427</td>
+      <td>0.822</td>
+      <td>1131</td>
+      <td>0.496</td>
+      <td>4.400</td>
+      <td>52</td>
+      <td>0.363</td>
+      <td>4.064</td>
+      <td>97</td>
     </tr>
     <tr>
       <td scope="row">Ha</td>
-      <td>0.542</td>
-      <td>1.014</td>
-      <td>979</td>
-      <td>0.520</td>
-      <td>4.605</td>
-      <th>52</th>
-      <th>0.496</th>
-      <th>5.338</th>
+      <td>0.538</td>
+      <td>1.003</td>
+      <td>982</td>
+      <td>0.513</td>
+      <td>4.550</td>
+      <th>51</th>
+      <th>0.488</th>
+      <th>5.256</th>
       <th>63</th>
     </tr>
     <tr>
       <td scope="row">Rh</td>
-      <td>0.100</td>
-      <td>0.235</td>
-      <td>2932</td>
-      <td>0.077</td>
-      <td>0.786</td>
-      <td>208</td>
-      <td>0.056</td>
-      <td>0.709</td>
-      <td>248</td>
+      <td>0.099</td>
+      <td>0.231</td>
+      <td>2921</td>
+      <td>0.075</td>
+      <td>0.762</td>
+      <td>204</td>
+      <td>0.055</td>
+      <td>0.689</td>
+      <td>244</td>
     </tr>
     <tr>
       <td scope="row">Ly</td>
-      <th>0.677</th>
-      <th>1.203</th>
-      <th>959</th>
-      <th>0.678</th>
-      <th>5.970</th>
-      <td>60</td>
-      <td>0.395</td>
-      <td>4.625</td>
-      <td>206</td>
+      <th>0.672</th>
+      <th>1.190</th>
+      <th>968</th>
+      <th>0.674</th>
+      <th>5.931</th>
+      <td>59</td>
+      <td>0.393</td>
+      <td>4.596</td>
+      <td>199</td>
     </tr>
     <tr>
       <th colspan="10">Combinations</th>
     </tr>
     <tr>
       <td scope="row">Me+Ha</td>
-      <td>0.697</td>
-      <td>1.270</td>
-      <td>447</td>
-      <td>0.721</td>
-      <td>6.331</td>
-      <td>22</td>
-      <th>0.632</th>
-      <th>6.727</th>
-      <th>33</th>
+      <td>0.693</td>
+      <td>1.256</td>
+      <td>453</td>
+      <td>0.717</td>
+      <td>6.290</td>
+      <td>21</td>
+      <th>0.626</th>
+      <th>6.668</th>
+      <th>32</th>
     </tr>
     <tr>
       <td scope="row">Me+Ha+Rh</td>
-      <td>0.692</td>
-      <td>1.262</td>
-      <td>408</td>
-      <td>0.656</td>
-      <td>5.774</td>
-      <td>21</td>
-      <td>0.565</td>
-      <td>6.067</td>
-      <td>34</td>
+      <td>0.688</td>
+      <td>1.250</td>
+      <td>413</td>
+      <td>0.650</td>
+      <td>5.717</td>
+      <td>20</td>
+      <td>0.557</td>
+      <td>5.994</td>
+      <td>33</td>
     </tr>
     <tr>
       <td scope="row">Me+Ha+Ly</td>
-      <th>0.803</th>
-      <th>1.409</th>
-      <td>287</td>
-      <th>0.821</th>
-      <th>7.234</th>
+      <th>0.800</th>
+      <th>1.396</th>
+      <td>291</td>
+      <th>0.818</th>
+      <th>7.205</th>
       <td>16</td>
-      <td>0.606</td>
-      <td>6.512</td>
-      <th>33</th>
+      <td>0.602</td>
+      <td>6.480</td>
+      <td>33</td>
     </tr>
     <tr>
       <td scope="row">Me+Ha+Rh+Ly</td>
-      <td>0.789</td>
-      <td>1.391</td>
-      <th>281</th>
-      <td>0.770</td>
-      <td>6.759</td>
-      <th>15</th>
-      <td>0.565</td>
-      <td>6.106</td>
-      <td>34</td>
+      <td>0.785</td>
+      <td>1.378</td>
+      <th>286</th>
+      <td>0.765</td>
+      <td>6.714</td>
+      <th>14</th>
+      <td>0.560</td>
+      <td>6.054</td>
+      <td>33</td>
     </tr>
   </tbody>
 </table> 
