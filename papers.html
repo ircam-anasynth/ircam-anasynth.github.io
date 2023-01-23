@@ -8,14 +8,14 @@ title: Papers
 
 <div>
 
-    {% for group in groups %}
+    {% for group in groups reversed %}
 
         <h3>{{ group.name }}</h3>
         <ul class="list-group list-group-flush">
         {% for paper in group.items %}
-        <li class="list-group-item mt-2 border-0">
+        <li class="list-group-item border-0">
             <div>
-                <h5><a class="link-dark" href="{{ paper.url }}">{{ paper.title }}</a></h5>
+                <h5 data-toc-text="{{ paper.title }}"><a class="link-dark" href="{{ paper.url }}">{{ paper.title }}</a></h5>
             </div>
             <div>
                 {{ paper.authors }}
@@ -28,12 +28,11 @@ title: Papers
             </div>
 
         </li>
-    {%endfor%}
+        {%endfor%}
     </ul>
-
-
-{% endfor %}
-
+    {% endfor %}
+    <div class="mx-auto" style="height: 800px;"> <!-- hack to pad the bottom to avoid bad TOC scrolling behavior -->
+    </div>
 
 </div>
 
