@@ -49,7 +49,8 @@ exactly.
 Alignment was done by adjusting the markers for the start of each word. We used the spectrogram representation to
 precisely align the start of the words with the corresponding onsets. 
 
-We publicly released our Chapter 10 manual alignment timestamps [here](tbd).
+The Chapter 10 audio, text and timestamps are available 
+[here](https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/chapter10/russell_the_problems_of_philosophy_chap_10.zip).
 
 #### Playlist50 (singing voice)
 
@@ -59,7 +60,7 @@ training, and we gathered a playlist containing 50 of these songs. We simply con
 corresponding annotated lyrics available in DALI. The playlist contains 18094 words, and the corresponding audio has a 
 duration of 2:50:24 (HH:MM:SS). The other 100 songs were kept for our experiments (see paper).
 
-The Playlist50 audio and annotations can be found [here](tbd).
+The Playlist50 audio and annotations are available [here](tbd).
 
 
 <br/>
@@ -70,7 +71,8 @@ The Playlist50 audio and annotations can be found [here](tbd).
 
 We provide below a visualisation of the alignment of more than two hours of audio with the corresponding text 
 (the chapters 7 to 13) of the Librivox audiobook 
-["The problems of philosophy", by B. Russell](https://librivox.org/the-problems-of-philosophy-by-bertrand-russell-2/)
+["The problems of philosophy", by B. Russell](https://librivox.org/the-problems-of-philosophy-by-bertrand-russell-2/).
+It appears clearly that the alignment remains accurate even after more than 2 hours of audio 
 (use full screen for better rendering).
 
 <div class="row">
@@ -78,13 +80,14 @@ We provide below a visualisation of the alignment of more than two hours of audi
         <div class="col-8">
             <div class="embed-responsive embed-responsive-4by3">
                 <video controls>
-                    <source src="tbd" type="video/mp4">
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/chapter_07-13_alignment.webm" type="video/webm">
                 </video>
             </div>
         </div>
     </div>
 </div>
 <br/>
+
 
 #### Singing voice
 
