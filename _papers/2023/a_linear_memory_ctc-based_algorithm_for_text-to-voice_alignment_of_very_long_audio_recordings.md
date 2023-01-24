@@ -60,7 +60,8 @@ training, and we gathered a playlist containing 50 of these songs. We simply con
 corresponding annotated lyrics available in DALI. The playlist contains 18094 words, and the corresponding audio has a 
 duration of 2:50:24 (HH:MM:SS). The other 100 songs were kept for our experiments (see paper).
 
-The Playlist50 audio and annotations are available [here](tbd).
+The Playlist50 audio, annotations and DALI ids are available 
+[here](https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/playlist50/playlist50.zip).
 
 
 <br/>
@@ -80,7 +81,7 @@ It appears clearly that the alignment remains accurate even after more than 2 ho
         <div class="col-8">
             <div class="embed-responsive embed-responsive-4by3">
                 <video controls>
-                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/chapter_07-13_alignment.webm" type="video/webm">
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/chapter_07-13_alignment.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -92,14 +93,15 @@ It appears clearly that the alignment remains accurate even after more than 2 ho
 #### Singing voice
 
 We provide below a visualisation of the alignment of more two hours of audio with the corresponding text 
-of Playlist50 (use full screen for better rendering).
+of Playlist50. It appears clearly that the alignment remains accurate even after more than 2 hours of audio 
+(use full screen for better rendering).
 
 <div class="row">
     <div class="d-flex justify-content-center">
         <div class="col-8">
             <div class="embed-responsive embed-responsive-4by3">
                 <video controls>
-                    <source src="tbd" type="video/mp4">
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/playlist50_alignment.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -109,15 +111,87 @@ of Playlist50 (use full screen for better rendering).
 
 #### Other languages
 
-We provide below a visualisation of the alignment of speech in other languages than English. The system succeeds
-despite the fact that it has been trained on English speech only (use full screen for better rendering).
+We provide below a visualisation of the alignment of speech in other languages than English. These audio are excerpts
+of open source Librivox audiobooks in different languages. The system succeeds to align text-to-voice 
+despite the fact that it has been trained on English language only (use full screen for better rendering).
 
+
+
+##### Chinese
+
+An extract of ["Art of War", by Sun Tzu](https://librivox.org/the-art-of-war-by-sun-tzu-3/). The original text was 
+transliterated with [pinyin](https://pypi.org/project/pinyin).
 <div class="row">
     <div class="d-flex justify-content-center">
         <div class="col-8">
             <div class="embed-responsive embed-responsive-4by3">
                 <video controls>
-                    <source src="tbd" type="video/mp4">
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/suntzu_alignment.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
+##### Czech
+
+An extract of ["Krysař", by Viktor Dyk](https://librivox.org/krysar-by-viktor-dyk/).
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <div class="col-8">
+            <div class="embed-responsive embed-responsive-4by3">
+                <video controls>
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/kryzar_alignment.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
+##### French
+
+An extract of ["De l'esprit des lois", by Montesquieu](https://librivox.org/de-lesprit-des-lois-by-charles-louis-de-montesquieu-1004//).
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <div class="col-8">
+            <div class="embed-responsive embed-responsive-4by3">
+                <video controls>
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/espritdeslois_alignment.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
+##### Greek
+
+An extract of ["Anixi", by Kostas Karyotakis](https://librivox.org/multilingual-poetry-collection-volume-012/). The original text was 
+transliterated with [polyglot](https://github.com/aboSamoor/polyglot), and mapped back to greek.
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <div class="col-8">
+            <div class="embed-responsive embed-responsive-4by3">
+                <video controls>
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/anixi_alignment.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
+##### Spanish
+
+An extract of ["Don Quijote", by Cervantes](https://librivox.org/don-quijote-vol-1-by-miguel-de-cervantes-saavedra/).
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <div class="col-8">
+            <div class="embed-responsive embed-responsive-4by3">
+                <video controls>
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/cervantes_alignment.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
