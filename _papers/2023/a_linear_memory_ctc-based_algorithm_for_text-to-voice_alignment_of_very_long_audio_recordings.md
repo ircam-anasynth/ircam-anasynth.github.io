@@ -21,8 +21,8 @@ abstract: |
 ---
 
 
-Welcome to the companion web site of our paper "A linear memory CTC-based algorithm for text-to-voice
-alignment of very long audio recordings"
+Welcome to the companion website of our paper "A linear memory CTC-based algorithm for text-to-voice
+alignment of very long audio recordings".
 <br/>
 
 
@@ -115,7 +115,23 @@ We provide below a visualisation of the alignment of speech in other languages t
 of open source Librivox audiobooks in different languages. The system succeeds to align text-to-voice 
 despite the fact that it has been trained on English language only (use full screen for better rendering).
 
+##### Arabic
 
+An extract of ["كليلة ودمنة (Kalila wa dimna)", by Abdullah Ibn al-Muqaffaʿ](https://forum.librivox.org/viewtopic.php?f=60&t=79535). The original text was 
+manually transliterated (we tried other options to automate the transliteration such as Google Translate or 
+[polyglot](https://github.com/aboSamoor/polyglot), but their transliteration was not enough accurate).
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <div class="col-8">
+            <div class="embed-responsive embed-responsive-4by3">
+                <video controls>
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/kalila_alignment.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
 
 ##### Chinese
 
@@ -150,6 +166,22 @@ An extract of ["Krysař", by Viktor Dyk](https://librivox.org/krysar-by-viktor-d
 </div>
 <br/>
 
+##### Dutch
+
+An extract of ["Anno 2070: een blik in de toekomst", by Pieter Harting](https://librivox.org/anno-2070-een-blik-in-de-toekomst-by-dr-dioscorides/).
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <div class="col-8">
+            <div class="embed-responsive embed-responsive-4by3">
+                <video controls>
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/harting_alignment.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
 ##### French
 
 An extract of ["De l'esprit des lois", by Montesquieu](https://librivox.org/de-lesprit-des-lois-by-charles-louis-de-montesquieu-1004//).
@@ -166,16 +198,48 @@ An extract of ["De l'esprit des lois", by Montesquieu](https://librivox.org/de-l
 </div>
 <br/>
 
+##### German
+
+An extract of ["Kritik der praktischen Vernunft", by Immanuel Kant](https://librivox.org/sammlung-kurzer-deutscher-prosa-016-by-various/).
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <div class="col-8">
+            <div class="embed-responsive embed-responsive-4by3">
+                <video controls>
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/kant_alignment.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
 ##### Greek
 
 An extract of ["Anixi", by Kostas Karyotakis](https://librivox.org/multilingual-poetry-collection-volume-012/). The original text was 
-transliterated with [polyglot](https://github.com/aboSamoor/polyglot), and mapped back to greek.
+transliterated with [polyglot](https://github.com/aboSamoor/polyglot).
 <div class="row">
     <div class="d-flex justify-content-center">
         <div class="col-8">
             <div class="embed-responsive embed-responsive-4by3">
                 <video controls>
                     <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/anixi_alignment.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
+##### Italian
+
+An extract of ["Il Principe", by Niccolò Machiavelli](https://librivox.org/il-principe-by-niccolo-machiavelli/).
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <div class="col-8">
+            <div class="embed-responsive embed-responsive-4by3">
+                <video controls>
+                    <source src="https://anasynth.papers.ircam.fr/2023/a-linear-memory-ctc-based-algorithm-for-text-to-voice-alignment-of-very-long-audio-recordings/results/machiavel_alignment.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
