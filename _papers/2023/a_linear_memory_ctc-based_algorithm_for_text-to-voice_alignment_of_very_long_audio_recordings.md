@@ -21,8 +21,8 @@ abstract: |
 ---
 
 
-Welcome to the companion website of our paper "A linear memory CTC-based algorithm for text-to-voice
-alignment of very long audio recordings".
+Welcome to the companion website of our paper ["A linear memory CTC-based algorithm for text-to-voice
+alignment of very long audio recordings"](https://www.mdpi.com/2076-3417/13/3/1854).
 <br/>
 
 
