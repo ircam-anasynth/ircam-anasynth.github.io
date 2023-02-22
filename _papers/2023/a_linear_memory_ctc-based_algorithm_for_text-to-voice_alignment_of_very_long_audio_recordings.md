@@ -262,3 +262,5 @@ An extract of ["Don Quijote", by Cervantes](https://librivox.org/don-quijote-vol
     </div>
 </div>
 <br/>
+
+<p><small>Visualisations done with <a href="https://forum.ircam.fr/projects/detail/partiels">Partiels</a>.</small></p>
