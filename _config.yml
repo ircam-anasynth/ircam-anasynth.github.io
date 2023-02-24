@@ -6,3 +6,7 @@ collections:
   papers:
     output: true
     permalink: /:collection/:year/:name
+
+  demos:
+    output: true
+    permalink: /:collection/:year/:name

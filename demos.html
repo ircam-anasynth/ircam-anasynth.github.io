@@ -1,0 +1,39 @@
+---
+layout: default
+title: Demos
+---
+
+
+{% assign groups = site.demos | group_by: "category" | sort: "authors" %}
+
+<div>
+
+    {% for group in groups reversed %}
+
+        <h3>{{ group.name }}</h3>
+        <ul class="list-group list-group-flush">
+        {% for demo in group.items %}
+        <li class="list-group-item border-0">
+            <div>
+                <h5 data-toc-text="{{ demo.title }}"><a class="link-dark" href="{{ demo.url }}">{{ demo.title }}</a></h5>
+            </div>
+            <div>
+                {{ demo.authors }}
+            </div>
+            <div>
+                <span class="aparte">Abstract</span> <a class="caret" data-toggle="collapse" href="#{{ demo.tag }}" role="button" aria-expanded="false" aria-controls="{{ demo.tag }}"><i class="fas fa-caret-up"></i></a>
+                <p class="collapse" id="{{ demo.tag }}">
+                {{ demo.abstract }}
+                </p>
+            </div>
+
+        </li>
+        {%endfor%}
+    </ul>
+    {% endfor %}
+    <div class="mx-auto" style="height: 800px;"> <!-- hack to pad the bottom to avoid bad TOC scrolling behavior -->
+    </div>
+
+</div>
+
+
