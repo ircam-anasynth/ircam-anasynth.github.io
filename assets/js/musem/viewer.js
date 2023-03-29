@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import { PCDLoader } from 'three/addons/loaders/PCDLoader.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
+
 import {displayLoader, removeLoader} from './html.js'
 import {getDefaultAudioContext} from "./audio.js";
 
@@ -12,18 +14,22 @@ htmlBody.style.margin = '0px';
 htmlBody.style.height = '100%';
 htmlBody.style.width = '100%';
 
-const URL_PREFIX = 'https://anasynth.demos.ircam.fr/ivi'
+
+
+const ROOT_URL_PREFIX = 'https://anasynth.demos.ircam.fr/musem'
+const SPRITE_URL = ROOT_URL_PREFIX + '/assets/point.png'
+
 
 let handler = (function() {
 
     let _h = {}
 
+    _h.modalities = ['instrumental', 'mood', 'genre', 'versions']
+    _h.modality = _h.modalities[0]
 
     _h.displayElement = htmlBody;
 
-    _h.scene = null
-    _h.loader = null ;
-    _h.renderer = null
+    _h.sprite = null
 
     _h.context = null
     _h.source = null
@@ -36,13 +42,33 @@ let handler = (function() {
         _h.displayElement.innerHTML = html;
     }
 
+
     _h.init = () => {
-        _h.wait('Loading...')
-        return Promise.all([
-                _h.load_points(URL_PREFIX + '/assets/ivi_shs5_pretrained_hamely_v2_C1_1epoch.embeddings_umap.pcd'), //'/static/assets/ivi_shs5_ha_C1.embeddings_umap.pcd'),
-                _h.load_sprite(URL_PREFIX + '/assets/point.png'),
-                _h.load_samples(URL_PREFIX + '/assets/samples.json')])
+        return _h.load_sprite()
+            .then(_h.load_modality)
             .then(_h.show)
+    }
+
+    _h.load_sprite = function() {
+        const url = SPRITE_URL
+        return new Promise(
+            (resolve, reject) => {
+                const loader = new THREE.TextureLoader()
+                loader.load(
+                    // resource URL
+                    url, //'/static/assets/test.pcd',
+                    // called when the resource is loaded
+                    sprite => {
+                        _h.sprite = sprite
+                        resolve()
+                    },
+                    // called when loading is in progresses
+                    xhr => console.log('sprite '+ (xhr.loaded / xhr.total * 100) + '% loaded'),
+                    // called when loading has errors
+                    error => reject(error)
+                )
+            }
+        )
     }
 
     _h.load_points = function(url) {
@@ -64,23 +90,7 @@ let handler = (function() {
         )
     }
 
-    _h.load_sprite = function(url) {
-        return new Promise(
-            (resolve, reject) => {
-                const loader = new THREE.TextureLoader()
-                loader.load(
-                    // resource URL
-                    url, //'/static/assets/test.pcd',
-                    // called when the resource is loaded
-                    sprite => resolve(sprite),
-                    // called when loading is in progresses
-                    xhr => console.log('sprite '+ (xhr.loaded / xhr.total * 100) + '% loaded'),
-                    // called when loading has errors
-                    error => reject(error)
-                )
-            }
-        )
-    }
+
 
     _h.load_samples = function(url) {
         return new Promise(
@@ -106,29 +116,51 @@ let handler = (function() {
     }
 
 
+
+    _h.load_modality = (m) => {
+        if (m === undefined) {
+            m = 'instrumental'
+        }
+        _h.modality = m
+        let point_url, sample_url
+        if (_h.modality === 'versions') {
+            point_url = ROOT_URL_PREFIX + '/ivi/assets/ivi_shs5_pretrained_hamely_v2_C1_1epoch.embeddings_umap.pcd'
+            sample_url = ROOT_URL_PREFIX + '/ivi/assets/samples.json'
+        } else {
+            point_url = ROOT_URL_PREFIX + '/mep/'+ _h.modality + '/mep_' + _h.modality + '_umap.pcd'
+            sample_url = ROOT_URL_PREFIX + '/mep/'+ _h.modality + '/mep_' + _h.modality + '_umap.json'
+        }
+
+        _h.wait('Loading...')
+        return Promise.all([
+                _h.load_points(point_url),
+                _h.load_samples(sample_url)])
+
+    }
+
     _h.show = values => {
         removeLoader()
-        let points, sprite, samples
-        [points, sprite, samples] = values
+        let points, samples
+        [points, samples] = values
 
         /*let geometry = points.geometry
         const sizes = new Float32Array(Array(geometry.getAttribute('color').count).fill(0.02))
         geometry.setAttribute('size', new THREE.Float32BufferAttribute( sizes, 1 ))
         geometry.attributes.size.needsUpdate = true*/
         let material = points.material
-        material.map = sprite
+        material.map = _h.sprite
         material.size = 0.02
         material.alphaTest = 0.5
         material.transparent = true
 
-        // get the canvas that is already set in the base.html and has full height/width from main.css
+        //const renderer = _h.renderer
+        //const canvas = renderer.domElement;
+
         const canvas = document.querySelector('#c');
 
         // renderer
         const renderer = new THREE.WebGLRenderer({antialias: true, canvas});
-        //const renderer = new THREE.WebGLRenderer();
-        //renderer.setSize( window.innerWidth, window.innerHeight );
-        //document.body.appendChild( renderer.domElement );
+
         let renderRequested = false;
 
         function resizeRendererToDisplaySize(renderer) {
@@ -169,6 +201,18 @@ let handler = (function() {
         const scene = new THREE.Scene();
         scene.add(points)
 
+        const gui = new GUI('modalities');
+        $( gui.domElement ).mouseenter(event => {
+            _h.raycasting = false;
+        } );
+        $( gui.domElement ).mouseleave(function() {
+            _h.raycasting = true;
+        } );
+        let params = {modality: _h.modality}
+        gui.add(params, 'modality', _h.modalities).onChange( function () {
+            _h.load_modality(params.modality).then(_h.show)
+
+        } );
 
         // raycaster
         const raycaster = new THREE.Raycaster();
@@ -228,6 +272,9 @@ let handler = (function() {
         }
 
         function mouseDown(event) {
+            if (_h.raycasting) {
+                return
+            }
 
             // stop animation if needed
             maybeUnscheduleAnimation()
@@ -264,6 +311,9 @@ let handler = (function() {
         }
 
         function mouseUp(event) {
+            if (_h.raycasting) {
+                return
+            }
 
             if (currentIndex === null) {
                 scheduleAnimation(3000)
@@ -281,7 +331,12 @@ let handler = (function() {
 
             // play
             const sample = samples[currentIndex]
-            const url = URL_PREFIX + '/audio/' + sample.class_label + '/' + sample.label + '.mp3' //'/static/assets/tresillo.mp3' //
+            let url
+            if (_h.modality === 'versions') {
+                url = ROOT_URL_PREFIX + '/ivi/audio/' + sample.class_label + '/' + sample.label + '.mp3'
+            } else {
+                url = ROOT_URL_PREFIX + '/mep/audio/' + sample.uri
+            }
             console.log(url)
             _h.stop()
             _h.play(url)
@@ -342,7 +397,6 @@ let handler = (function() {
         // go
         //render(0.0)
         requestAnimationFrame(render)
-
     }
 
     _h.play = function(url) {
@@ -382,5 +436,6 @@ let handler = (function() {
 
 handler.init()
     .catch(error => {
+        console.log(error)
         handler.display(error); //getErrorHtml(error);
     });
