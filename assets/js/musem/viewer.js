@@ -204,7 +204,11 @@ let handler = (function() {
         // this is hackish, but we have to remove the previous gui otherwise it will attach several of them which
         // confuses everything. Problem is then that the mouse might be outside the new gui, and the mouseleave event
         // is never triggered.
-        $('.lil-gui').remove()
+        if ($.find('.lil-gui').length > 0) {
+            $('.lil-gui').remove()
+            _h.raycasting = true; // in case the mouse ends up outside the gui
+        }
+
         const gui = new GUI('modalities');
         $( gui.domElement ).mouseenter(event => {
             _h.raycasting = false;
