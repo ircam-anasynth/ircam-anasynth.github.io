@@ -382,8 +382,8 @@ let handler = (function() {
 
                 last_time = time
 
-                points.rotation.x += 0.002
-                points.rotation.y += 0.002
+                points.rotation.x += 0.001
+                points.rotation.y += 0.001
                 points.rotation.z += 0.001
 
                 renderer.render( scene, camera );
