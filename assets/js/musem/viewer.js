@@ -20,6 +20,7 @@ const ROOT_URL_PREFIX = 'https://anasynth.demos.ircam.fr/musem'
 const SPRITE_URL = ROOT_URL_PREFIX + '/assets/point.png'
 
 
+
 let handler = (function() {
 
     let _h = {}
@@ -72,6 +73,7 @@ let handler = (function() {
     }
 
     _h.load_points = function(url) {
+        console.log(url)
         // load the points
         return new Promise(
             (resolve, reject) => {
@@ -117,11 +119,8 @@ let handler = (function() {
 
 
 
-    _h.load_modality = (m) => {
-        if (m === undefined) {
-            m = 'instrumental'
-        }
-        _h.modality = m
+    _h.load_modality = () => {
+
         let point_url, sample_url
         if (_h.modality === 'versions') {
             point_url = ROOT_URL_PREFIX + '/ivi/assets/ivi_shs5_pretrained_hamely_v2_C1_1epoch.embeddings_umap.pcd'
@@ -201,6 +200,11 @@ let handler = (function() {
         const scene = new THREE.Scene();
         scene.add(points)
 
+        // gui
+        // this is hackish, but we have to remove the previous gui otherwise it will attach several of them which
+        // confuses everything. Problem is then that the mouse might be outside the new gui, and the mouseleave event
+        // is never triggered.
+        $('.lil-gui').remove()
         const gui = new GUI('modalities');
         $( gui.domElement ).mouseenter(event => {
             _h.raycasting = false;
@@ -210,9 +214,13 @@ let handler = (function() {
         } );
         let params = {modality: _h.modality}
         gui.add(params, 'modality', _h.modalities).onChange( function () {
-            _h.load_modality(params.modality).then(_h.show)
-
+            _h.modality = params.modality
+            _h.load_modality().then(_h.show)
         } );
+        //}
+
+
+
 
         // raycaster
         const raycaster = new THREE.Raycaster();
@@ -272,7 +280,7 @@ let handler = (function() {
         }
 
         function mouseDown(event) {
-            if (_h.raycasting) {
+            if (_h.raycasting === false) {
                 return
             }
 
@@ -311,7 +319,7 @@ let handler = (function() {
         }
 
         function mouseUp(event) {
-            if (_h.raycasting) {
+            if (_h.raycasting === false) {
                 return
             }
 
